@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<htmllang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Quotes application</title>
+</head>
+
+
+<body>
+
+    <div id="quotes">
+
+
+    </div>
+
+    <div id="author">
+
+    </div>
+
+
+    <button id="newquotes">New Quotes</button>
+
+
+    <script>
+
+const api="";
+const newquotes=document.getElementById("newquotes");
+const quotes=document.getElementById("quotes");
+
+const author=document.getElementById("author");
+const getquotes=async()=>{
+
+
+    const api="http://type.fit/api/quotes";
+
+
+try
+{
+    let data= await fetch(api);
+    console.log(data.json());
+
+
+
+
+   // realData= data.json();
+    //consloe.log(realData);
+
+   // console.log(realData[10].text);
+  // console.log(realdata[10].author);
+}
+
+catch(error){
+
+    console.log("got an error");
+}
+
+}
+
+getquotes();
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
